@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For demo scenarios only
 
-Things you may want to cover:
+A mock microservice with 2 methods and one parameter as input for each: INN
 
-* Ruby version
+Example (method "status"):
 
-* System dependencies
+Request:
 
-* Configuration
+curl localhost:3000/status -H 'Content-Type: application/json' -d '{"inn": "1234567890"}'
 
-* Database creation
+Response:
 
-* Database initialization
+{"inn":"1234567890","result":"inactive"}
 
-* How to run the test suite
+-------------------------------------------------------------------------------
 
-* Services (job queues, cache servers, search engines, etc.)
+Example (method "bankruptcy"):
 
-* Deployment instructions
+Request:
 
-* ...
+curl localhost:3000/bankruptcy -H 'Content-Type: application/json' -d '{"inn": "1234567890"}'
+
+
+Response:
+
+{"inn":"1234567890","result":true}
