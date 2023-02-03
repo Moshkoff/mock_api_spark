@@ -11,4 +11,16 @@ class ApiController < ApplicationController
     }
   end
 
+
+  def bankruptcy
+    inn = params[:inn]
+
+    random_result= [true, false].sample
+
+    @message = {
+      "inn" => inn,
+      "result" => random_result
+    }
+  end
+
 end

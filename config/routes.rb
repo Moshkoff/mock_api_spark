@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   post 'status', to: 'api#status'
 
+  post 'bankruptcy', to: 'api#bankruptcy'
+
 end
